@@ -4,12 +4,18 @@
 #include <fstream>
 using namespace std;
 	
-int main() 
+int main(int argc, char* argv[])
 {
+    if(argc<2)
+    {
+        cout<<"input your source file"<<endl;
+        return -1;
+    }
+    
     char character;
     ifstream in_stream;
 
-    in_stream.open("outputsource.cpp");
+    in_stream.open(argv[1]);
 
     //
     do
